@@ -1,0 +1,190 @@
+.button
+{
+-fx-background-color : #2979FF;
+-fx-background-radius:15px;
+-fx-text-fill:  #fff;
+
+}
+.button:hover
+{
+-fx-background-color : #355ECE ;
+
+
+}
+.button:pressed
+{
+-fx-background-color : #0C39FF ;
+
+
+}
+.button1
+{
+-fx-background-color : #fff;
+-fx-background-radius:0 15 0 15;
+-fx-text-fill:  #8E24AA;
+
+}
+.button1:hover
+{
+-fx-background-color :#8C9EFF ;
+
+
+}
+.button1:pressed
+{
+-fx-background-color : #8C9EFF;
+
+
+}
+.text-field{
+-fx-background-color : #fff;
+-fx-text-fill:  #3f9fff;
+}
+.button_user
+{
+-fx-background-color : #fff;
+-fx-text-fill:  #3f9fff;
+
+}
+.button_user:hover
+{
+-fx-background-color :#C5CAE9 ;
+-fx-scale-x: 1.1;
+-fx-scale-y: 1.1;
+-fx-scale-z: 1.1;
+
+
+}
+.button_user:pressed
+{
+-fx-background-color : #8C9EFF;
+
+
+}
+
+.button2
+{
+-fx-background-color :  #0C39FF;
+-fx-border-color: #FFF;
+-fx-text-fill:  #FFF;
+}
+.button2:hover
+{
+-fx-background-color : #0C3988 ;
+-fx-text-fill:   #FFF;
+}
+.button2:pressed
+{
+-fx-background-color : #0C3400 ;
+-fx-text-fill: #FFF;
+}
+
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-cell-size : 20;
+    -fx-background-color:   #2D75E8;
+}
+.table-view .column-header .label{
+
+   -fx-text-fill: white;
+   -fx-font-weight: bold;
+   -fx-alignment: CENTER_LEFT;
+}
+.table-view .cell{
+   -fx-cell-size: 30;
+  -fx-alignment: center-left;
+  -fx-text-fill: #000000;
+  -fx-alignment: CENTER_LEFT;
+}
+
+.table-row-cell:selected {
+    -fx-background-color:  rgb(127, 172, 243);
+ }
+ .table-row-cell:selected .text {
+        -fx-fill : white ;
+
+ }
+/* scroll bar starts here */
+
+/* The increment and decrement button CSS class of scrollbar */
+.table-view .increment-button ,.table-view .decrement-button {
+    -fx-background-color:transparent;
+	-fx-background-radius: 2em;
+
+}
+
+/* The main scrollbar **track** CSS class  */
+.table-view .scroll-bar:horizontal .track,
+.table-view .scroll-bar:vertical .track{
+	-fx-background-color: transparent;
+	-fx-border-color:derive(  #2D75E8,80%);
+	-fx-background-radius: 2em;
+	-fx-border-radius:2em;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color:derive( #2D75E8,90%);
+	-fx-background-insets: 2, 0, 0;
+	-fx-background-radius: 2em;
+
+}
+
+/* chart properties */
+
+.chart {
+    -fx-padding: 10px;
+    -fx-background-color: transparent;
+    -fx-legend-visible: false;
+}
+.chart-plot-background {
+    -fx-background-color:transparent;
+}
+
+.chart-pie {
+    -fx-border-color: derive(-fx-pie-color, 1%);
+    -fx-border-width: 0px;
+}
+
+.linear-grad {
+    -fx-background-color: linear-gradient(to bottom left, #fff, #fff);
+     -fx-background-radius:15px;
+     -fx-border-color: #29B6F6;
+     -fx-border-radius:15px;
+
+}
+.linear-grad-pane {
+    -fx-background-color: linear-gradient(to bottom left, #E0E0E0, #E0E0E0);
+     -fx-background-radius:20px;
+     -fx-border-color: #E0E0E0;
+     -fx-border-radius:20px;
+
+}
+.linear-grad-weather {
+    -fx-background-color: linear-gradient(to bottom left, #29B6F6, #7C4DFF);
+
+}
+.linear-grad-weather:hover
+{
+-fx-background-color: linear-gradient(to bottom left, #0D47A1, #448AFF);
+
+
+}
+
+.linear-grad-lbl {
+    -fx-background-color: linear-gradient(to bottom left, #448AFF, #00E5FF);
+    -fx-background-radius:10px;
+    -fx-text-fill: white;
+    -fx-border-color: white;
+}
+
+.linear-grad-btn {
+    -fx-background-color: linear-gradient(to bottom left, #448AFF, #00E5FF);
+
+
+}
+
+
+

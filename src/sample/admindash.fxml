@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="519.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.adminControl">
+   <children>
+      <Pane prefHeight="519.0" prefWidth="165.0" style="-fx-background-color: #7C4DFF;">
+         <children>
+            <Button fx:id="dashboardBtn" layoutX="23.0" layoutY="105.0" mnemonicParsing="false" onAction="#handleButtonEvent" prefHeight="44.0" prefWidth="141.0" styleClass="button1" stylesheets="@../css/style.css" text="Dashboard">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_dashboard_100px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="51.0" fitWidth="59.0" layoutX="57.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_clapperboard_100px.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="addMovieBtn" layoutX="23.0" layoutY="168.0" mnemonicParsing="false" onAction="#handleButtonEvent" prefHeight="44.0" prefWidth="141.0" styleClass="button1" stylesheets="@../css/style.css" text="ADD MOVIE">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_add_100px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="viewMovieBtn" layoutX="23.0" layoutY="231.0" mnemonicParsing="false" onAction="#handleButtonEvent" prefHeight="44.0" prefWidth="141.0" styleClass="button1" stylesheets="@../css/style.css" text="ALL MOVIES">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_summary_list_100px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteMovieBtn" layoutX="23.0" layoutY="292.0" mnemonicParsing="false" onAction="#handleButtonEvent" prefHeight="44.0" prefWidth="141.0" styleClass="button1" stylesheets="@../css/style.css" text="DELETE MOVIE">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_delete_file_100px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="adminLogout" layoutX="57.0" layoutY="465.0" mnemonicParsing="false" onAction="#handleButtonEvent" prefHeight="44.0" prefWidth="51.0" styleClass="button1" stylesheets="@../css/style.css">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_export_100px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fx:id="btnClose" fitHeight="25.0" fitWidth="25.0" layoutX="2.0" layoutY="2.0" onMousePressed="#handleMouseEvent" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_close_window_100px.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="topMovieBtn" layoutX="23.0" layoutY="349.0" mnemonicParsing="false" onAction="#handleButtonEvent" prefHeight="44.0" prefWidth="141.0" styleClass="button1" stylesheets="@../css/style.css" text="TOP MOVIES">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_walter_white_100px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Button>
+         </children></Pane>
+      <Pane layoutX="165.0" prefHeight="58.0" prefWidth="544.0" style="-fx-background-color: #F3E5F5;">
+         <children>
+            <ImageView fitHeight="44.0" fitWidth="44.0" layoutX="408.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_admin_settings_male_100px_1.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <Label layoutX="459.0" layoutY="20.0" text="Hello, Admin">
+               <font>
+                  <Font name="Segoe UI Light" size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Line endX="237.33331298828125" layoutX="272.0" layoutY="58.0" startX="-242.0" stroke="#dd23c5" />
+         </children>
+      </Pane>
+      <StackPane layoutX="165.0" layoutY="58.0" prefHeight="461.0" prefWidth="544.0">
+         <children>
+            <Pane fx:id="addMoviePane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F3E5F5;">
+               <children>
+                  <Label layoutX="18.0" layoutY="14.0" prefHeight="25.0" prefWidth="125.0" text="ADD MOVIE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="mvID" alignment="CENTER" layoutX="128.0" layoutY="77.0" prefHeight="33.0" prefWidth="355.0" styleClass="linear-grad" stylesheets="@../css/style.css">
+                     <font>
+                        <Font name="Segoe UI Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="39.0" layoutY="85.0" text="MOVIE ID">
+                     <font>
+                        <Font name="Segoe UI Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="mvName" alignment="CENTER" layoutX="128.0" layoutY="120.0" prefHeight="33.0" prefWidth="355.0" styleClass="linear-grad" stylesheets="@../css/style.css">
+                     <font>
+                        <Font name="Segoe UI Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="61.0" layoutY="128.0" text="NAME">
+                     <font>
+                        <Font name="Segoe UI Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="mvDir" alignment="CENTER" layoutX="128.0" layoutY="168.0" prefHeight="33.0" prefWidth="355.0" styleClass="linear-grad" stylesheets="@../css/style.css">
+                     <font>
+                        <Font name="Segoe UI Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="37.0" layoutY="176.0" text="DIRECTOR">
+                     <font>
+                        <Font name="Segoe UI Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="mvGenre" alignment="CENTER" layoutX="128.0" layoutY="214.0" prefHeight="33.0" prefWidth="355.0" styleClass="linear-grad" stylesheets="@../css/style.css">
+                     <font>
+                        <Font name="Segoe UI Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="23.0" layoutY="267.0" text="RELEASE YEAR">
+                     <font>
+                        <Font name="Segoe UI Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="mvYear" alignment="CENTER" layoutX="128.0" layoutY="259.0" prefHeight="33.0" prefWidth="355.0" styleClass="linear-grad" stylesheets="@../css/style.css">
+                     <font>
+                        <Font name="Segoe UI Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="59.0" layoutY="222.0" text="GENRE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="addMovie" layoutX="369.0" layoutY="323.0" mnemonicParsing="false" onAction="#handleButtonEvent" prefHeight="33.0" prefWidth="118.0" stylesheets="@../css/style.css" text="ADD MOVIE" />
+                  <Label fx:id="addMovieStat" layoutX="192.0" layoutY="388.0" prefHeight="19.0" prefWidth="225.0">
+                     <font>
+                        <Font name="Segoe UI Light" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="allMoviePane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F3E5F5;">
+               <children>
+                  <Label layoutX="23.0" layoutY="22.0" prefHeight="19.0" prefWidth="88.0" text="All Movies">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="movieTable" layoutX="23.0" layoutY="53.0" prefHeight="393.0" prefWidth="503.0" stylesheets="@../css/style.css">
+                    <columns>
+                      <TableColumn fx:id="col_id" prefWidth="47.000030517578125" text="ID" />
+                      <TableColumn fx:id="col_name" prefWidth="105.99996948242188" text="NAME" />
+                        <TableColumn fx:id="col_dir" prefWidth="155.0" text="DIRECTOR" />
+                        <TableColumn fx:id="col_genre" prefWidth="102.0" text="GENRE" />
+                        <TableColumn fx:id="col_year" prefWidth="93.0" text="RELEASE YEAR" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane fx:id="deleteMoviePane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F3E5F5;">
+               <children>
+                  <Label layoutX="23.0" layoutY="22.0" prefHeight="20.0" prefWidth="109.0" text="Delete a movie">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="deleteSearch" alignment="CENTER" layoutX="291.0" layoutY="58.0" onAction="#handleButtonEvent" prefHeight="33.0" prefWidth="225.0" promptText="enter id or movie name" styleClass="linear-grad" stylesheets="@../css/style.css">
+                     <font>
+                        <Font name="Segoe UI Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="20.0" fitWidth="19.0" layoutX="265.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_search_100px.png" />
+                     </image>
+                  </ImageView>
+                  <Pane fx:id="deleteTrue" layoutX="119.0" layoutY="120.0" prefHeight="263.0" prefWidth="286.0" style="-fx-background-color: #9575CD;" stylesheets="@../css/style.css" visible="false">
+                     <children>
+                        <Label layoutX="20.0" layoutY="36.0" text="ID" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="74.0" text="Name" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="115.0" text="Director" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="152.0" text="Genre" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="24.0" layoutY="191.0" text="Year" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="idLbl" alignment="CENTER" layoutX="109.0" layoutY="35.0" prefHeight="16.0" prefWidth="157.0">
+                           <font>
+                              <Font name="Segoe UI Light" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nameLbl" alignment="CENTER" layoutX="109.0" layoutY="74.0" prefHeight="16.0" prefWidth="157.0">
+                           <font>
+                              <Font name="Segoe UI Light" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="dirLbl" alignment="CENTER" layoutX="109.0" layoutY="115.0" prefHeight="16.0" prefWidth="157.0">
+                           <font>
+                              <Font name="Segoe UI Light" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="genreLbl" alignment="CENTER" layoutX="109.0" layoutY="152.0" prefHeight="16.0" prefWidth="157.0">
+                           <font>
+                              <Font name="Segoe UI Light" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="yearLbl" alignment="CENTER" layoutX="109.0" layoutY="191.0" prefHeight="16.0" prefWidth="157.0">
+                           <font>
+                              <Font name="Segoe UI Light" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="deleteMovie" layoutX="100.0" layoutY="224.0" mnemonicParsing="false" onAction="#handleButtonEvent" prefHeight="33.0" prefWidth="88.0" styleClass="button1" text="Delete" />
+                     </children>
+                  </Pane>
+                  <Label fx:id="deleteStat" alignment="CENTER" layoutX="89.0" layoutY="412.0" prefHeight="20.0" prefWidth="346.0">
+                     <font>
+                        <Font name="Segoe UI Light" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="imageView" fitHeight="233.0" fitWidth="286.0" layoutX="119.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="topMoviePane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F3E5F5;">
+               <children>
+                  <Label layoutX="23.0" layoutY="22.0" prefHeight="19.0" prefWidth="141.0" text="ADD TOP MOVIES">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="addTopMvBtn" layoutX="221.0" layoutY="169.0" mnemonicParsing="false" onAction="#addTopMovie" prefHeight="33.0" prefWidth="102.0" stylesheets="@../css/style.css" text="Add Top Movie" />
+                  <Label fx:id="topMovieStat" alignment="CENTER" layoutX="102.0" layoutY="299.0" prefHeight="20.0" prefWidth="339.0">
+                     <font>
+                        <Font name="Segoe UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="topMovieBox" alignment="CENTER" layoutX="70.0" layoutY="83.0" prefHeight="33.0" prefWidth="423.0" promptText="enter movie id" styleClass="button_user" stylesheets="@../css/style.css">
+                     <font>
+                        <Font name="Segoe UI Light" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+            <Pane fx:id="dashboardPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F3E5F5;">
+               <children>
+                  <Label layoutX="23.0" layoutY="22.0" prefHeight="19.0" prefWidth="88.0" text="DASHBOARD">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="23.0" layoutY="53.0" prefHeight="139.0" prefWidth="141.0" style="-fx-background-color: #fff; -fx-background-radius: 15px;">
+                     <children>
+                        <Label fx:id="noUsers" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="14.0" prefHeight="70.0" prefWidth="132.0" text="0" textFill="#20c381">
+                           <font>
+                              <Font name="Segoe UI Light" size="53.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="84.0" prefHeight="33.0" prefWidth="51.0" text="USERS">
+                           <font>
+                              <Font name="Segoe UI Light" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="190.0" layoutY="53.0" prefHeight="139.0" prefWidth="141.0" style="-fx-background-color: #fff; -fx-background-radius: 15px;">
+                     <children>
+                        <Label fx:id="noMovies" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="6.0" prefHeight="70.0" prefWidth="125.0" text="0" textFill="#2dc6e9">
+                           <font>
+                              <Font name="Segoe UI Light" size="53.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="41.0" layoutY="86.0" prefHeight="33.0" prefWidth="64.0" text="MOVIES">
+                           <font>
+                              <Font name="Segoe UI Light" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children></Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

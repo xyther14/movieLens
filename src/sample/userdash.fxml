@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane prefHeight="448.0" prefWidth="785.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Userdash">
+   <children>
+      <Pane prefHeight="448.0" prefWidth="156.0" style="-fx-background-color: #fff;">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="36.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_microsoft_hololens_100px_1.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="58.0" layoutY="22.0" text="movielens" textFill="#3f9fff">
+               <font>
+                  <Font name="Segoe UI Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="topMovieBtn" layoutX="23.0" layoutY="78.0" mnemonicParsing="false" onAction="#handleButtonEvent" prefHeight="28.0" prefWidth="133.0" styleClass="button_user" stylesheets="@../css/style.css" text="Top Movies">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_dashboard_100px_2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="watchListBtn" layoutX="23.0" layoutY="131.0" mnemonicParsing="false" onAction="#handleButtonEvent" prefHeight="34.0" prefWidth="133.0" styleClass="button_user" stylesheets="@../css/style.css" text="Watch List">
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_wish_list_100px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="157.0" prefHeight="54.0" prefWidth="432.0" style="-fx-background-color: #C5CAE9;">
+         <children>
+            <Label fx:id="topLbl" layoutX="14.0" layoutY="16.0" text="Top Movies">
+               <font>
+                  <Font name="Segoe UI Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="searchBox" layoutX="245.0" layoutY="13.0" onAction="#handleButtonEvent" prefHeight="25.0" prefWidth="146.0" styleClass="text-field" stylesheets="@../css/style.css" />
+            <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="394.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_search_100px_1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="590.0" prefHeight="448.0" prefWidth="195.0" style="-fx-background-color: #fff;" stylesheets="@../css/style.css">
+         <children>
+            <Label layoutX="28.0" layoutY="20.0" text="Logout" textFill="#4a4a4a">
+               <font>
+                  <Font name="Segoe UI Bold" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="logoutBtn" layoutX="132.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleButtonEvent" prefHeight="33.0" prefWidth="42.0" styleClass="button_user" stylesheets="@../css/style.css">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_logout_rounded_left_100px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="25.0" layoutY="139.0" mnemonicParsing="false" prefHeight="136.0" prefWidth="146.0" styleClass="button_user">
+               <graphic>
+                  <ImageView fitHeight="127.0" fitWidth="123.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Capture.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="userName" alignment="CENTER" layoutX="25.0" layoutY="288.0" prefHeight="25.0" prefWidth="146.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane layoutX="157.0" layoutY="54.0" prefHeight="108.0" prefWidth="432.0" style="-fx-background-color: #C5CAE9;">
+         <children>
+            <Pane layoutX="19.0" layoutY="6.0" prefHeight="81.0" prefWidth="392.0" style="-fx-background-color: #FFAB91; -fx-background-radius: 20px;">
+               <children>
+                  <ImageView fitHeight="127.0" fitWidth="156.0" layoutX="256.0" layoutY="-34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ok-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="welcomeLbl" alignment="TOP_LEFT" layoutX="14.0" layoutY="11.0" prefHeight="30.0" prefWidth="269.0" textFill="#ff5500">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="infoLbl" alignment="TOP_LEFT" layoutX="19.0" layoutY="41.0" prefHeight="23.0" prefWidth="261.0" textFill="#ff5c00">
+                     <font>
+                        <Font name="Segoe UI Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Line endX="109.66668701171875" layoutX="215.0" layoutY="94.0" startX="-119.0" stroke="#8796e2" />
+         </children>
+      </Pane>
+      <StackPane layoutX="158.0" layoutY="160.0" prefHeight="288.0" prefWidth="432.0">
+         <children>
+            <Pane fx:id="errorPane" layoutX="10.0" layoutY="10.0" prefHeight="288.0" prefWidth="432.0" style="-fx-background-color: #C5CAE9;">
+               <children>
+                  <Label alignment="CENTER" layoutX="126.0" layoutY="195.0" prefHeight="23.0" prefWidth="195.0" text="Movie is not in record" textFill="#ff8300">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="214.0" fitWidth="350.0" layoutX="36.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/404-dd057bc0930bb669a06430bcf040e03c0c7d3bb5aa1004c881fd09f787cea0c3.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="watchListPane" layoutX="10.0" layoutY="10.0" prefHeight="288.0" prefWidth="432.0" style="-fx-background-color: #C5CAE9;">
+               <children>
+                  <TableView fx:id="watchListTable" layoutX="24.0" layoutY="14.0" prefHeight="259.0" prefWidth="385.0" stylesheets="@../css/style.css">
+                    <columns>
+                      <TableColumn fx:id="movie_col" prefWidth="383.0" text="MOVIES I'VE WATCHED" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane fx:id="viewMoviePane" prefHeight="288.0" prefWidth="432.0" style="-fx-background-color: #C5CAE9;">
+               <children>
+                  <ImageView fx:id="moviePoster" fitHeight="204.0" fitWidth="133.0" layoutX="288.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="movieName" layoutX="14.0" layoutY="37.0" prefHeight="28.0" prefWidth="269.0">
+                     <font>
+                        <Font name="Segoe UI Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="movieName1" layoutX="14.0" layoutY="74.0" prefHeight="24.0" prefWidth="94.0" text="Directed By">
+                     <font>
+                        <Font name="Segoe UI Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="movieName11" layoutX="14.0" layoutY="118.0" prefHeight="24.0" prefWidth="94.0" text="Genre">
+                     <font>
+                        <Font name="Segoe UI Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="movieName111" layoutX="14.0" layoutY="156.0" prefHeight="24.0" prefWidth="94.0" text="Year">
+                     <font>
+                        <Font name="Segoe UI Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dirLbl" layoutX="114.0" layoutY="74.0" prefHeight="24.0" prefWidth="171.0" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="genreLbl" layoutX="114.0" layoutY="118.0" prefHeight="24.0" prefWidth="171.0" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="yearLbl" layoutX="111.0" layoutY="156.0" prefHeight="24.0" prefWidth="171.0" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Rating fx:id="myRating" layoutX="20.0" layoutY="242.0" onMouseClicked="#setmyRating" prefHeight="24.0" prefWidth="176.0" rating="0.0" />
+                  <Rating fx:id="avgRating" disable="true" layoutX="231.0" layoutY="242.0" partialRating="true" prefHeight="24.0" prefWidth="176.0" rating="0.0" updateOnHover="true" />
+                  <Label fx:id="movieName1111" layoutX="21.0" layoutY="223.0" prefHeight="12.0" prefWidth="81.0" text="My rating">
+                     <font>
+                        <Font name="Segoe UI Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="movieName11111" layoutX="238.0" layoutY="223.0" prefHeight="19.0" prefWidth="116.0" text="Average Rating">
+                     <font>
+                        <Font name="Segoe UI Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <JFXToggleButton fx:id="watchToggle" layoutX="-16.0" layoutY="-2.0" onAction="#addWatchList" prefHeight="33.0" prefWidth="155.0" size="5.0" text="Not Watched" textFill="#ba2626" toggleColor="#1556e4" toggleLineColor="#1c8ef2" unToggleColor="#12a0ff" unToggleLineColor="#1369fd">
+                     <font>
+                        <Font name="Segoe UI Bold" size="11.0" />
+                     </font>
+                  </JFXToggleButton>
+               </children>
+            </Pane>
+            <Pane fx:id="showcasePane" layoutX="10.0" layoutY="10.0" prefHeight="288.0" prefWidth="432.0" style="-fx-background-color: #C5CAE9;">
+               <children>
+                  <Pane fx:id="mv1Pane" layoutX="14.0" layoutY="7.0" prefHeight="127.0" prefWidth="116.0" style="-fx-background-color: #fff; -fx-background-radius: 15px;" visible="false">
+                     <children>
+                        <Button fx:id="mv1Btn" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonEvent" prefHeight="102.0" prefWidth="88.0" styleClass="button_user" stylesheets="@../css/style.css">
+                           <graphic>
+                              <ImageView fx:id="mv1Img" fitHeight="85.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </Button>
+                     </children></Pane>
+                  <Pane fx:id="mv2Pane" layoutX="158.0" layoutY="7.0" prefHeight="127.0" prefWidth="116.0" style="-fx-background-color: #fff; -fx-background-radius: 15px;" visible="false">
+                     <children>
+                        <Button fx:id="mv2Btn" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonEvent" prefHeight="102.0" prefWidth="88.0" styleClass="button_user" stylesheets="@../css/style.css">
+                           <graphic>
+                              <ImageView fx:id="mv2Img" fitHeight="85.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="mv3Pane" layoutX="302.0" layoutY="7.0" prefHeight="127.0" prefWidth="116.0" style="-fx-background-color: #fff; -fx-background-radius: 15px;" visible="false">
+                     <children>
+                        <Button fx:id="mv3Btn" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonEvent" prefHeight="102.0" prefWidth="88.0" styleClass="button_user" stylesheets="@../css/style.css">
+                           <graphic>
+                              <ImageView fx:id="mv3Img" fitHeight="85.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="mv4Pane" layoutX="14.0" layoutY="144.0" prefHeight="127.0" prefWidth="116.0" style="-fx-background-color: #fff; -fx-background-radius: 15px;" visible="false">
+                     <children>
+                        <Button fx:id="mv4Btn" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonEvent" prefHeight="102.0" prefWidth="88.0" styleClass="button_user" stylesheets="@../css/style.css">
+                           <graphic>
+                              <ImageView fx:id="mv4Img" fitHeight="85.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="mv5Pane" layoutX="158.0" layoutY="144.0" prefHeight="127.0" prefWidth="116.0" style="-fx-background-color: #fff; -fx-background-radius: 15px;" visible="false">
+                     <children>
+                        <Button fx:id="mv5Btn" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonEvent" prefHeight="102.0" prefWidth="88.0" styleClass="button_user" stylesheets="@../css/style.css">
+                           <graphic>
+                              <ImageView fx:id="mv5Img" fitHeight="85.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="mv6Pane" layoutX="302.0" layoutY="144.0" prefHeight="127.0" prefWidth="116.0" style="-fx-background-color: #fff; -fx-background-radius: 15px;" visible="false">
+                     <children>
+                        <Button fx:id="mv6Btn" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonEvent" prefHeight="102.0" prefWidth="88.0" styleClass="button_user" stylesheets="@../css/style.css">
+                           <graphic>
+                              <ImageView fx:id="mv6Img" fitHeight="85.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
